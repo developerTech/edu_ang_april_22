@@ -1,0 +1,193 @@
+https://code.visualstudio.com/download (install)
+https://github.com/Aakashdeveloper (create account)
+https://nodejs.org/en/ (install)
+https://git-scm.com/downloads (install)
+https://github.com/Aakashdeveloper (follow)
+https://github.com/developerTech (follow)
+
+//extension
+> chrome (https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
+
+> vscode
+githistory
+gitlens
+TabNine
+eslint
+vscode-icons
+spellCheck
+
+
+fullstack zomato app
+login app (jwt)
+combine login + zomato
+Template Form
+Reactive Form
+Testing
+Multilingual
+
+Deployment
+>>>>>>>>>
+AWS
+Heroku
+Netlify
+> Angular over node server (MEAN)
+> Angular over Python server
+
+-------No Backend------
+Designing (css,html)
+Api
+app Api
+login Api
+
+
+(get) cityname >           https://zomatoajulypi.herokuapp.com/location
+(get) restwrtcity >        https://zomatoajulypi.herokuapp.com/restaurant?stateId=1
+(get) quickSearch>         https://zomatoajulypi.herokuapp.com/quicksearch
+
+
+(get) onbasisofMeal >      https://zomatoajulypi.herokuapp.com/restaurant?mealtype_id=
+(get) cuisinefilter >      https://zomatoajulypi.herokuapp.com/filter/4?cuisine=1
+(get) costfilter >         https://zomatoajulypi.herokuapp.com/filter/1?hcost=1000&lcost=500
+
+(get) restdetails >        http://zomatoajulypi.herokuapp.com/details/1
+(get) menu >               https://zomatoajulypi.herokuapp.com/menu/1
+
+(post) orderspage >        http://zomatoajulypi.herokuapp.com/menuItem
+                           body [1,4,5]
+(post)placeOrder >        
+
+(get) allorder>            
+       
+(get) restaurants>         https://zomatoajulypi.herokuapp.com/restaurants
+https://developerpayment.herokuapp.com/paynow
+
+
+/******GetAllUser*****/
+(GET)> https://developerjwt.herokuapp.com/api/auth/users
+
+/******Register*****/
+(POST)> https://developerjwt.herokuapp.com/api/auth/register
+(body) => {"name":"Aakash", "email":"aa@gmail.com","password":"12345678","phone":343432,role?":"user"}
+
+/******Login*****/
+(POST) => https://developerjwt.herokuapp.com/api/auth/login
+(body)  => {"email":"aa@gmail.com","password":"12345678"}
+(response)=> {auth:true,token:'dgsdg'}
+
+/******UserInfo*****/
+(GET) => https://developerjwt.herokuapp.com/api/auth/userinfo
+(Header) => {'x-access-token':'token value from login'}
+
+//////
+> npm
+> package.json
+> install packages
+> setup Angular
+> walkthrough
+
+>>>> Node package Manager
+//////Json//////
+[
+    {
+        "name":"John",
+        "city":"Amsterdam"
+    },
+    {
+        "name":"Amit",
+        "city":"Paris"
+    }
+]
+
+////////////package.json//////
+> entry point to app
+> MetaData (Name,Description, version,author)
+> script (start,build,test)
+> packages we require for app
+
+////Step to generate package.json */
+** NodeJs must be install in laptop
+> open cmd/terminal
+> go inside the folder using cmd
+> npm init
+> answer all questions
+> type 'yes'
+
+////Step to install packages ////
+** NodeJs must be install in laptop
+> open cmd/terminal
+> go inside the folder using cmd
+> npm i packagename  /  npm install packagename 
+
+
+/////////How to generate Angular app/////
+#window
+//One time Step
+> open the cmd as admin
+> npm i -g @angular/cli
+
+// next every time you need new app
+> open the cmd
+> go inside folder where you want app
+> ng new appname
+
+
+#mac/linux
+//One time Step
+> open terminal
+> sudo npm i -g @angular/cli
+
+// next every time you need new app
+> open the terminal
+> go inside folder where you want app
+> ng new appname
+
+
+// start the app
+> open the terminal
+> go inside folder where you want app
+> npm start
+> http://localhost:4200
+
+
+//////////
+tsconfig.json > configuration of conversation
+tsconfig.app.json > configuration of app
+angular.json> this is main file which have app structure 
+            > First File in the application
+editorConfig > To make code style same across developer
+style.css > common css for the whole application
+polyfills > it help to support all browser
+main.ts > will help to locate the main module
+index.html > first file that will load in browser
+favicon > simple icons
+assets > all the static files images/css/videos
+
+
+/// Bootstrap of application///
+angular.json > main.ts > app.module.ts => app.component.ts
+>>>>Complied and load as .js in index.html
+> Browser will pick index.html
+
+/////////////////////
+Single Page application
+
+/////Building Block of Angular //////
+Modules  >>>>> Module is parent of application (ngModule)
+Component >>>> HTML,CSS,Logic (component)
+Pipe >>>> Run time data Change (pipe,pipeTransform)
+Service >>>> To connect with external agent dependency injection (Injectable)
+Routing >>>> To manage Multiple Pages (ngModule)
+
+/// Data Binding ///
+> One Way Data Binding
+    > Data Binding {{}}
+    > Property Binding []
+    > Event Binding ()
+
+> Two Way Data Binding [()]
+
+
+
+/////////////
+ng generate component  / ng g c
+ 
