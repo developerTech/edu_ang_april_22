@@ -3,13 +3,14 @@
         <span>E!</span>
     </div>
     <div id="heading">
-        Find The Best Restaurants Near You
+        {{title}}
     </div>
     <div class="dropdown">
-        <select>
-            <option>----SELECT YOUR CITY-----</option>
-            <option>Delhi</option>
-            <option>Mumbai</option>
+        <select (change)="handleCity($event)">
+            <option value="default">----SELECT YOUR CITY-----</option>
+            <option *ngFor="let loc of locations" [value]="loc.state_id">
+                    {{loc.state}}
+            </option>
         </select>
         <select class="restSelect">
             <option>----SELECT YOUR Restaurants-----</option>
@@ -18,3 +19,10 @@
         </select>
     </div>
 </div>
+
+   <!--<input type="text" [value]="textVal"/>
+        <img src=""/>
+    
+    <option value="1">Delhi</option>
+    <option value="2">Mumbai</option>
+    -->

@@ -7,6 +7,10 @@ import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './Home/Search.component';
 import { QuickSearchComponent } from './Home/QuickSearch.component';
 import { HomeComponent } from './Home/Home.component';
+import { MyUpperPipe } from './pipes/myupper.pipe';
+import { DiscountPipe } from './pipes/discount.pipe';
+import { AppRoutingModule } from './app-routing.module';
+import { ListingComponent } from './Listing/listing.component';
 
 @NgModule({
     // All the component & pipe
@@ -16,12 +20,16 @@ import { HomeComponent } from './Home/Home.component';
         FooterComponent,
         SearchComponent,
         QuickSearchComponent,
-        HomeComponent
+        HomeComponent,
+        MyUpperPipe,
+        DiscountPipe,
+        ListingComponent
     ],
 
     // All the module will declare here
     imports: [
-        BrowserModule
+        BrowserModule,
+        AppRoutingModule
     ],
 
     // All the services will declare here
