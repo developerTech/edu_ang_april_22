@@ -1,1 +1,57 @@
-<h1>Listing</h1>
+<p class="heading">Listing Page</p>
+<div class="content">
+    <div class="filter">
+        <h3>Filters</h3>
+        <hr/>
+        <div class="mealFilter">
+            <h4>Meal Type</h4>
+            <div>
+                <input type="radio">South Indian
+            </div>
+            <div>
+                <input type="radio">North Indian
+            </div>
+            <div>
+                <input type="radio">Fast Food
+            </div>
+        </div>
+        <hr/>
+        <div class="costFilter">
+            <h3>Cost Filter</h3>
+            <div>
+                <input type="checkbox"/>100-300
+            </div>
+            <div>
+                <input type="checkbox"/>300-500
+            </div>
+            <div>
+                <input type="checkbox"/>500-1000
+            </div>
+        </div>
+        <hr/>
+    </div>
+    <div *ngIf="restaurants && restaurants.length">
+        <div class="tiles">
+            <div class="cardContainer" *ngFor="let rest of restaurants">
+                <div class="component1">
+                    <img [src]='rest.restaurant_thumb' alt="snacks"/>
+                </div>
+                <div class="component2">
+                    <h2>{{rest.restaurant_name}}</h2>
+                    <p>{{rest.address}}</p>
+                    <p>Rating: {{rest.average_rating}} star</p>
+                    <p>Cost: Rs {{rest.cost}}/2 person</p>
+                    <div>
+                        <span *ngFor="let mType of rest.mealTypes" class="pills">{{mType.mealtype_name}}</span> &nbsp;
+                    </div>
+                    <button class="btn">
+                        <a href="../details/details.html">Proceed</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <ng-template #noData>
+            <img src='../../assets/image/loader.gif'/>
+        </ng-template>
+    </div>
+</div>

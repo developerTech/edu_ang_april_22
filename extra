@@ -204,3 +204,40 @@ LowerCase
 Currency
 Decimal
 Percent
+
+dependency Injection
+
+rxjs  
+service       component
+observable > Subscribe
+
+ngOnChanges():void{
+        console.log(">>>>>>inside ngOnChanges")
+    }
+
+    ngOnDestroy():void{
+        console.log(">>>>>>inside ngOnDestroy")
+    }
+
+
+var a = "Avengers"
+var b = "Hollywood"
+var c = "Action"
+
+// old
+var d = "An "+a+" is an "+c+" movie from ind "+b+"."
+'An Avengers is an Action movie from ind Hollywood.'
+
+/// new
+var e = `An ${a} is an ${c} movie from ind ${b}.`
+'An Avengers is an Action movie from ind Hollywood.'
+
+params
+> send after /
+> we need to define it 
+> use only for small records
+
+queryParams
+> send after ?
+> no need to define
+> use for multiple values to pass

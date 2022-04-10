@@ -11,6 +11,9 @@ import { MyUpperPipe } from './pipes/myupper.pipe';
 import { DiscountPipe } from './pipes/discount.pipe';
 import { AppRoutingModule } from './app-routing.module';
 import { ListingComponent } from './Listing/listing.component';
+import { HomeService } from './services/home.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ListingService } from './services/listing.service';
 
 @NgModule({
     // All the component & pipe
@@ -29,11 +32,15 @@ import { ListingComponent } from './Listing/listing.component';
     // All the module will declare here
     imports: [
         BrowserModule,
-        AppRoutingModule
+        AppRoutingModule,
+        HttpClientModule
     ],
 
     // All the services will declare here
-    providers: [],
+    providers: [
+        HomeService,
+        ListingService
+    ],
 
     // Only and only one component(main Component)
     bootstrap: [

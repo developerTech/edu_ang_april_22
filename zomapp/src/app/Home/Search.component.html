@@ -14,8 +14,9 @@
         </select>
         <select class="restSelect">
             <option>----SELECT YOUR Restaurants-----</option>
-            <option>Ama Cafe</option>
-            <option>Hotel Taj</option>
+            <option *ngFor="let rest of restaurants" [value]="rest.restaurant_id">
+                {{rest.restaurant_name}} - {{rest.address}}
+        </option>
         </select>
     </div>
 </div>
