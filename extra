@@ -241,3 +241,22 @@ queryParams
 > send after ?
 > no need to define
 > use for multiple values to pass
+
+
+var a = [4,7,3,9,6,1]
+
+a.indexOf(7)
+1
+a.indexOf(4)
+0
+a.indexOf(6)
+4
+a.indexOf(12)
+-1
+a.indexOf(5)
+-1
+
+
+var a = [4,7,3,9,6,1]   
+a.filter((data) => {return data>5})
+[7, 9, 6]

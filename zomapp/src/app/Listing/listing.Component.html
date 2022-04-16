@@ -1,19 +1,9 @@
-<p class="heading">Listing Page</p>
 <div class="content">
     <div class="filter">
         <h3>Filters</h3>
         <hr/>
         <div class="mealFilter">
-            <h4>Meal Type</h4>
-            <div>
-                <input type="radio">South Indian
-            </div>
-            <div>
-                <input type="radio">North Indian
-            </div>
-            <div>
-                <input type="radio">Fast Food
-            </div>
+            <app-cuisine-filter [filterName]="filterText" (cuisineClicked)="dataReceive($event)"></app-cuisine-filter>
         </div>
         <hr/>
         <div class="costFilter">
@@ -30,11 +20,24 @@
         </div>
         <hr/>
     </div>
-    <div *ngIf="restaurants && restaurants.length">
+   
+    <div *ngIf="restaurants && restaurants.length; else noData">
+        
         <div class="tiles">
-            <div class="cardContainer" *ngFor="let rest of restaurants">
+            <div class="search">
+                <div class="form-group">
+                    <input class="form-control" placeholder="Enter Restaurants Name"
+                    [(ngModel)]="userInput"/>
+                </div>
+                <p>You are searching for restaurants {{userInput}}</p>
+                <p>Number of result is: {{ (restaurants | searchFilter:userInput).length}}</p>
+            </div>
+            <div class="cardContainer" *ngFor="let rest of restaurants | searchFilter:userInput">
                 <div class="component1">
                     <img [src]='rest.restaurant_thumb' alt="snacks"/>
+                    <button class="btn">
+                        <a [routerLink]="['/details']" [queryParams]="{restId: rest.restaurant_id}">Proceed</a>
+                    </button>
                 </div>
                 <div class="component2">
                     <h2>{{rest.restaurant_name}}</h2>
@@ -44,14 +47,17 @@
                     <div>
                         <span *ngFor="let mType of rest.mealTypes" class="pills">{{mType.mealtype_name}}</span> &nbsp;
                     </div>
-                    <button class="btn">
-                        <a href="../details/details.html">Proceed</a>
-                    </button>
+                    <br/>
+                    <div>
+                        <span *ngFor="let cType of rest.cuisines" class="pills pills2">{{cType.cuisine_name}}</span> &nbsp;
+                    </div>
+                    <br/>
                 </div>
             </div>
         </div>
-        <ng-template #noData>
-            <img src='../../assets/image/loader.gif'/>
-        </ng-template>
     </div>
+    <ng-template #noData>
+        <h1>Loading</h1>
+        <img src='../../assets/image/loader.gif'/>
+    </ng-template>
 </div>
