@@ -1,17 +1,18 @@
 <div class="contentDiv">
     <div class="imgDiv">
-        <img src="https://b.zmtcdn.com/data/pictures/chains/1/18453961/af81c42413a2fbbacd66eaf72175eb01.jpg" alt="snacks"/>
+        <img [src]="details[0].restaurant_thumb" alt="snacks"/>
     </div>
     <div class="content">
-        <h1>Samosa Chatni Snacks (2Pcs)</h1>
+        <h1>{{details[0].restaurant_name}}</h1>
         <i class="fa-regular fa-star checked"></i>
         <i class="fa-regular fa-star checked"></i>
         <i class="fa-regular fa-star checked"></i>
         <i class="fa-regular fa-star-half checked"></i>
         <span>231 Customers Rating</span>
-        <h3><del>Old Price: 290</del></h3>
-        <h3>New Price: 190</h3>
+        <h3><del>Old Price: 790</del></h3>
+        <h3>New Price: {{details[0].cost}}</h3>
         <h3>Best Taste of Fresh Chai with Samosa At your Door or DineIn</h3>
+        <p>{{details[0].address}}</p>
         <div class="feature_container">
             <div class="feature">
                 <img src="https://i.ibb.co/wJvrhYg/veg.png" alt="veg" class="fetIcon"/>

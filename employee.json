@@ -1,0 +1,36 @@
+{
+  "employee": [
+    {
+      "firstname": "John",
+      "lastname": "Michal",
+      "email": "a@a.com",
+      "pass": "12345678",
+      "clang": "Node",
+      "id": 1
+    },
+    {
+      "firstname": "Aakash",
+      "lastname": "Handa",
+      "email": "a@a.com",
+      "pass": "12345678",
+      "clang": "Angular",
+      "id": 2
+    },
+    {
+      "firstname": "John",
+      "lastname": "Michal",
+      "email": "a@a.com",
+      "pass": "12345678",
+      "clang": "Node",
+      "id": 3
+    },
+    {
+      "firstname": "John",
+      "lastname": "Michal",
+      "email": "a@a.com",
+      "pass": "12345678",
+      "clang": "Node",
+      "id": 4
+    }
+  ]
+}

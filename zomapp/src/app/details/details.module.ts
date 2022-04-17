@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common'
 import { SharedModule } from '../shared/shared.module';
 import { DetailsComponent } from './details.component';
+import { DetailsService } from '../services/details.service';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,7 @@ import { DetailsComponent } from './details.component';
 
     // All the services will declare here
     providers: [
-
+        DetailsService
     ]
 })
 

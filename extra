@@ -260,3 +260,20 @@ a.indexOf(5)
 var a = [4,7,3,9,6,1]   
 a.filter((data) => {return data>5})
 [7, 9, 6]
+
+///////
+ng-pristine ng-valid     ng-touched
+ng-dirty    ng-invalid   ng-untouched
+
+var a = "amsTErdAm"
+undefined
+a.charAt(0).toUpperCase()+a.slice(1).toUpperCase()
+'AMSTERDAM'
+a.charAt(0).toUpperCase()+a.slice(1).toLowerCase()
+'Amsterdam'
+a.slice(1)
+'msTErdAm'
+
+/////////
+Dummy api (testing purpose)
+> npx json-server --watch employee.json --port 8700
