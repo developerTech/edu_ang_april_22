@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Register Form
+        </div>
+        <div class="panel-body">
+            <form #form="ngForm" (submit)="submitForm(form)">
+                <div class="form-group" [class.has-error]="firstName.invalid && firstName.touched"
+                [class.has-success]="firstName.valid">
+                    <label for="fname" class="control-label">Name</label>
+                    <input type="text" class="form-control"
+                    name="name"
+                    [(ngModel)] = "registerForm.name"
+                    required
+                    #firstName="ngModel"
+                    /> 
+                    <div class="alert alert-danger" *ngIf="firstName.invalid && firstName.touched">
+                        Name is required
+                    </div>
+                </div>
+                <div class="form-group" [class.has-error]="mail.invalid && mail.dirty"
+                [class.has-success]="mail.valid && mail.dirty">
+                    <label for="email" class="control-label">Email</label>
+                    <input type="text" class="form-control"
+                    name="email"
+                    [(ngModel)] = "registerForm.email"
+                    pattern="^([a-zA-Z0-9]+)@([a-zA-Z0-9]+)\.([a-zA-Z]{2,5})$"
+                    #mail="ngModel"
+                    /> 
+                    <div class="alert alert-danger" *ngIf="mail.invalid && mail.dirty">
+                        Enter Valid Email
+                    </div>
+                </div>
+                <div class="form-group" [class.has-error]="pass.invalid && pass.dirty">
+                    <label for="password" class="control-label">Password</label>
+                    <input type="password" class="form-control"
+                    name="password"
+                    [(ngModel)] = "registerForm.password"
+                    minlength="8"
+                    #pass="ngModel"
+                    /> 
+                    <div class="alert alert-danger" *ngIf="pass.invalid && pass.dirty">
+                    Min Length is 8
+                    </div>
+                </div>
+                <div class="form-group" [class.has-error]="phone.invalid && phone.dirty">
+                    <label for="phone" class="control-label">Password</label>
+                    <input type="text" class="form-control"
+                    name="phone"
+                    [(ngModel)] = "registerForm.phone"
+                    minlength="8"
+                    #phone="ngModel"
+                    /> 
+                    <div class="alert alert-danger" *ngIf="phone.invalid && phone.dirty">
+                        Phone is required
+                    </div>
+                </div>
+
+
+                <button type="submit" class="btn btn-success">
+                    Register
+                </button> 
+            </form>
+        </div>
+    </div>
+</div>

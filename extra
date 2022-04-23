@@ -275,5 +275,8 @@ a.slice(1)
 'msTErdAm'
 
 /////////
+> open cmd as admin
+> npm i -g json-server 
+
 Dummy api (testing purpose)
 > npx json-server --watch employee.json --port 8700
