@@ -6,13 +6,14 @@ import { ListingComponent } from './listing.component';
 import { CuisineFilterComponent } from '../filters/cuisineFilter.component';
 import { RestSearchPipe } from '../pipes/restaurant.pipe';
 import { ListingService } from '../services/listing.service';
+import { CostFilterComponent } from '../filters/costFilter.component';
 
 
 @NgModule({
     declarations: [
         ListingComponent,
         CuisineFilterComponent,
-
+        CostFilterComponent,
         RestSearchPipe
     ],
 

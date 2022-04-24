@@ -4,7 +4,8 @@
             Login Form
         </div>
         <div class="panel-body">
-            <form #form="ngForm" (submit)="submitForm(form)">
+            <h2 style="color:red">{{loginError}}</h2>
+            <form #form="ngForm" (submit)="loginSubmit(form)">
                 <div class="form-group" [class.has-error]="mail.invalid && mail.dirty"
                 [class.has-success]="mail.valid && mail.dirty">
                     <label for="email" class="control-label">Email</label>

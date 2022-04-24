@@ -4,19 +4,8 @@
         <hr/>
         <div class="mealFilter">
             <app-cuisine-filter [filterName]="filterText" (cuisineClicked)="dataReceive($event)"></app-cuisine-filter>
-        </div>
-        <hr/>
-        <div class="costFilter">
-            <h3>Cost Filter</h3>
-            <div>
-                <input type="checkbox"/>100-300
-            </div>
-            <div>
-                <input type="checkbox"/>300-500
-            </div>
-            <div>
-                <input type="checkbox"/>500-1000
-            </div>
+            <hr/>
+            <app-cost-filter (costClicked)="costDataReceive($event)"></app-cost-filter>
         </div>
         <hr/>
     </div>

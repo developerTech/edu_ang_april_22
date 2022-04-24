@@ -36,6 +36,15 @@ export class ListingComponent implements OnInit {
             this.restaurants = data
         })
     }
+
+    costDataReceive(cost: string){
+        let lcost = Number(cost.split('-')[0])
+        let hcost = Number(cost.split('-')[1])
+        this.listingService.getCostData(lcost,hcost)
+        .subscribe((data:IRest[]) => {
+            this.restaurants = data
+        })
+    }
 }
 
 

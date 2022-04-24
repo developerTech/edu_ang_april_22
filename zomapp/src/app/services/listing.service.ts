@@ -9,6 +9,7 @@ export class ListingService {
 
     private restUrl = "https://zomatoajulypi.herokuapp.com/restaurant?mealtype_id="
     private cuisineUrl = "https://zomatoajulypi.herokuapp.com/filter"
+    private costUrl = "https://zomatoajulypi.herokuapp.com/filter"
  
     constructor(private http:HttpClient){}
 
@@ -19,7 +20,13 @@ export class ListingService {
     getCuisineData(cuisineId:string):Observable<IRest[]>{
         let id = Number(cuisineId);
         let mealId = sessionStorage.getItem('mealId')
-        let url = `${this.cuisineUrl}/${id}?cuisine=${mealId}`
+        let url = `${this.cuisineUrl}/${mealId}?cuisine=${id}`
+        return this.http.get<IRest[]>(url)
+    }
+
+    getCostData(lcost:number,hcost:number):Observable<IRest[]>{
+        let mealId = sessionStorage.getItem('mealId')
+        let url = `${this.costUrl}/${mealId}?hcost=${hcost}&lcost=${lcost}`
         return this.http.get<IRest[]>(url)
     }
 }
