@@ -1,0 +1,33 @@
+<div class="container">
+   <div class="panel panel-info">
+       <div class="panel-heading">
+           Orders
+       </div>
+       <div class="panel-body">
+           <table class="table table-responsive">
+               <thead>
+                   <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Cost</th>
+                    <th>Status</th>
+                    <th>Date</th>
+                    <th>Bank</th>
+                   </tr>
+               </thead>
+               <tbody>
+                   <tr *ngFor="let data of orders">
+                       <td>{{data.id}}</td>
+                       <td>{{data.name}}</td>
+                       <td>{{data.phone}}</td>
+                       <td>Rs.{{data.cost}}</td>
+                       <td>{{data.status}}</td>
+                       <td>{{data.date}}</td>
+                       <td>{{data.bank}}</td>
+                   </tr>
+               </tbody>
+           </table>
+        </div>
+   </div>
+</div>
