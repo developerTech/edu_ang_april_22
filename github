@@ -6,3 +6,20 @@
 
 >>> after every class
 > git pull
+
+
+//////first Time from New folder////
+git init
+git add .
+git commit -m "first commit"
+git remote add origin https://github.com/Aakashdeveloper/angapp22.git
+git push -u origin master
+
+////from same folder next all time
+git add .
+git commit -m "first commit"
+git push
+
+////////branches//////
+git checkout -b branchname
+git push -u origin branchname
