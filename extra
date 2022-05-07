@@ -280,3 +280,17 @@ a.slice(1)
 
 Dummy api (testing purpose)
 > npx json-server --watch employee.json --port 8700
+
+
+// open cmd as admin
+npm i -g heroku
+
+//mac /linux
+sudo npm i -g heroku
+
+Docker is container
+
+//create image
+docker build . -t angapp
+//run image
+docker run -p 3000:8700 angapp
