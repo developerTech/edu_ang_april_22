@@ -16,7 +16,7 @@ eslint
 vscode-icons
 spellCheck
 
-
+NPM
 fullstack zomato app
 login app (jwt)
 combine login + zomato
@@ -32,12 +32,16 @@ Heroku
 Netlify
 > Angular over node server (MEAN)
 > Angular over Python server
+> Jenkins For Angular
 
 -------No Backend------
 Designing (css,html)
 Api
 app Api
 login Api
+
+
+
 
 
 (get) cityname >           https://zomatoajulypi.herokuapp.com/location
