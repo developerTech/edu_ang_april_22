@@ -38,10 +38,10 @@ export class LoginComponent{
         localStorage.setItem('Role_Type',response['role']);
         localStorage.setItem('userName',response['name']);
         localStorage.setItem('userEmail',response['email']);
-        this.router.navigateByUrl('/RefreshComponent', { skipLocationChange: true }).then(() => {
-            this.router.navigate(['Your actualComponent']);
+        this.route.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+            this.route.navigate(['/']);
         }); 
-        this.route.navigate(['/'])
-        window.location.reload();
+        // this.route.navigate(['/'])
+        // window.location.reload();
     }
 } 
