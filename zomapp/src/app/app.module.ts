@@ -13,6 +13,10 @@ import { DetailsModule } from './details/details.module';
 import { OrderService } from './services/order.service';
 import { OrderComponent } from './booking/booking.component';
 import { ViewOrderComponent } from './viewOrders/viewOrder.component';
+import { LoginComponent } from './loginform/loginform.component';
+import { RegisterComponent } from './registerforms/registerform.component';
+import { LoginService } from './loginform/loginform.service';
+import { RegisterService } from './registerforms/registerform.service';
 
 @NgModule({
     // All the component & pipe
@@ -21,7 +25,9 @@ import { ViewOrderComponent } from './viewOrders/viewOrder.component';
         HeaderComponent,
         FooterComponent,
         OrderComponent,
-        ViewOrderComponent
+        ViewOrderComponent,
+        LoginComponent,
+        RegisterComponent
     ],
 
     // All the module will declare here
@@ -37,7 +43,9 @@ import { ViewOrderComponent } from './viewOrders/viewOrder.component';
 
     // All the services will declare here
     providers: [
-        OrderService
+        OrderService,
+        RegisterService,
+        LoginService
     ],
 
     // Only and only one component(main Component)

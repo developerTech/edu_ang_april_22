@@ -6,11 +6,20 @@
           <a [routerLink]="['/home']" class="btn btn-info">Home</a>
       </div>
       <div id="social">
-         <a href="/" class="btn btn-success">
-             <span class="glyphicon glyphicon-log-in"></span> LogIn</a>
-         &nbsp;
-         <a href="/register" class="btn btn-info">
-          <span class="glyphicon glyphicon-user"></span> Register</a>
+        <div *ngIf='token === ""'>
+            <a [routerLink]="['/login']" class="btn btn-success">
+                <span class="glyphicon glyphicon-log-in"></span> LogIn</a>
+            &nbsp;
+            <a [routerLink]="['/register']" class="btn btn-info">
+             <span class="glyphicon glyphicon-user"></span> Register</a>
+        </div>
+        <div *ngIf='token !== ""'>
+            <a class="btn btn-warning">
+                <span class="glyphicon glyphicon-user"></span> Hi {{userInfo.name}}
+            </a> &nbsp;
+            <button class="btn btn-danger"  (click)="logoutUser()">Logout</button>
+            
+        </div>
       </div>
     </header>
 </div>
